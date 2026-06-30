@@ -1,12 +1,14 @@
 // minify for fast load
 
 function doSearch() {
-    const query = document.getElementById("searchBox").value.trim();
+    const query = document.querySelector(".search-box").value.trim();
     if (!query) return;
 
-    window.location.href =
+    window.open(
         "http://backroomsneverend.wikidot.com/search:site/q/" +
-        encodeURIComponent(query);
+        encodeURIComponent(query),
+        "_blank"
+    );
 }
 
 document.getElementById("searchBtn").onclick = doSearch;
