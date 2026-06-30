@@ -1,9 +1,6 @@
-// minify for fast load
-
 function doSearch() {
-    const query = document.querySelector(".search-box").value.trim();
+    const query = document.getElementById("searchBox").value.trim();
     if (!query) return;
-
     window.open(
         "http://backroomsneverend.wikidot.com/search:site/q/" +
         encodeURIComponent(query),
